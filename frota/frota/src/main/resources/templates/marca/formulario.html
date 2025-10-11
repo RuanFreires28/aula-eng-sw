@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang ="en" xmlns:th="http://thymeleaf.org" >
->
-<head>
-<title>Cadastro Marca</title>
-</head>
+<head th:replace="~{fragmentos/head :: head('Cadastro Marcas')}"></head>
 <body>
+<header th:replace="~{fragmentos/header :: header(activePage='marca')}"></header>
+
 <div layout:fragment="header">
 	<div class="box">
 		<h1>Cadastro Marca</h1>
@@ -25,5 +24,6 @@
 			<input type="submit" value="Cadastrar">
 		</form>
 	</div>
+</div>
 </body>
 </html>

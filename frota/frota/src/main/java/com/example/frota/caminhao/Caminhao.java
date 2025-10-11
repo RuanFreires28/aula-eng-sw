@@ -43,6 +43,28 @@ public class Caminhao {
         this.placa = dados.placa();
         this.cargaMaxima = dados.cargaMaxima();
         this.marca = marca;
+        this.ano = dados.ano();
+    }
+
+    public Caminhao(AtualizacaoCaminhao dados, Marca marca) {
+        this.modelo = dados.modelo();
+        this.placa = dados.placa();
+        this.cargaMaxima = dados.cargaMaxima();
+        this.marca = marca;
         this.ano= dados.ano();
     }
+
+    public void atualizarInformacoes(AtualizacaoCaminhao dados, Marca marca) {
+        if (dados.modelo() != null )
+            this.modelo = dados.modelo();
+        if (dados.placa() != null)
+            this.placa =dados.placa();
+        if (dados.cargaMaxima() != 0)
+            this.cargaMaxima = dados.cargaMaxima();
+        if (marca != null)
+            this.marca = marca;
+        if (dados.ano() != 0)
+            this.ano = dados.ano();
+    }
+
 }
